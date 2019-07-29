@@ -1,0 +1,29 @@
+{
+    "name": "labourforce",
+    "version": "1.0.0",
+    "description": "this is a labour force web force for users",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "DEBUG=app,app:* nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/collins13/labourforce.git"
+    },
+    "author": "rashid collins mkoji",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/collins13/labourforce/issues"
+    },
+    "homepage": "https://github.com/collins13/labourforce#readme",
+    "dependencies": {
+        "bootstrap": "^4.3.1",
+        "chalk": "^2.4.2",
+        "debug": "^4.1.1",
+        "express": "^4.17.1",
+        "express-handlebars": "^3.1.0",
+        "nodemon": "^1.19.1",
+        "path": "^0.12.7"
+    }
+}
