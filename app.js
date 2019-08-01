@@ -4,6 +4,13 @@ const debug = require('debug')('app');
 const exphbs = require('express-handlebars');
 const chalk = require('chalk');
 const path = require('path');
+const mongoose = require('mongoose');
+
+
+// routes
+const indexRoute = require('./routes/indexRoute');
+const adminPanel = require('./routes/adminRoute');
+// end routes
 
 const app = express();
 
@@ -22,9 +29,14 @@ app.use('/images', express.static(path.join(__dirname, '/node_modules/images')))
 app.use('/js', express.static(path.join(__dirname, '/node_modules/js')));
 app.use('/css', express.static(path.join(__dirname, '/node_modules/css')));
 
-app.get('/', function(req, res) {
-    res.render('home');
-});
+// use routes
+app.use('/', indexRoute);
+app.use('/admin', adminPanel);
+
+// end use routes
+
+
+
 
 
 
