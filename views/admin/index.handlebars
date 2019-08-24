@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin - Dashboard</title>
+  <title> Admin - Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -86,10 +86,10 @@
   </nav>
 
   <div id="wrapper">
-{{!-- sidebar --}}
-{{>admin-sidebar}}
-{{!--  --}}
-    
+
+    {{!-- sidebar --}}
+    {{>admin-sidebar}}
+    {{!-- end sidebar --}}
 
     <div id="content-wrapper">
 
@@ -178,6 +178,19 @@
             Area Chart Example</div>
           <div class="card-body">
             <canvas id="myAreaChart" width="100%" height="30"></canvas>
+          </div>
+          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        </div>
+
+        <!-- DataTables Example -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Data Table Example</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              
+            </div>
           </div>
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>

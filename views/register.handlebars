@@ -1,42 +1,69 @@
 {{>navbar}}
 <style>
-    body{
+    body {
         background-image: url('images/products/yellow-background-with-dynamic-abstract-shapes_1393-144.jpg');
     }
-    .card { background-color:#fff; -moz-opacity: 0.8; opacity:.80;filter: alpha(opacity=80);}
+
+    .card {
+        background-color: #fff;
+        -moz-opacity: 0.8;
+        opacity: .80;
+        filter: alpha(opacity=80);
+    }
 </style>
 <div class="container">
-    
+
     <div class="card ml-auto mr-auto" style="width: 40rem;">
         <div class="card-header ml-auto mr-auto text-uppercase bg-danger">
             Create account
         </div>
         <div class="card-body">
-            <form action="/register" method="POST" id="form">
+            {{>messages}}
+            <form action="signup" method="POST" id="form">
                 <div class="form-group">
                     <label for="first">First Name:</label>
-                    <input type="text" name="first" class="form-control " id="first" placeholder="first name" required>
+                    <input type="text" name="first" class="form-control " id="first" placeholder="first name">
                 </div>
                 <div class="form-group">
                     <label for="last">Last Name:</label>
-                    <input type="text" name="last" class="form-control " id="last" placeholder="last name" required>
+                    <input type="text" name="last" class="form-control " id="last" placeholder="last name">
                 </div>
                 <div class="form-group ">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" class="form-control " id="email" placeholder="example@gmail.com"
-                        required>
+                    <input type="email" name="email" class="form-control " id="email" placeholder="example@gmail.com">
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <input type="password" name="password" class="form-control " id="password" placeholder="password"
-                        required>
+                        >
                 </div>
+                 {{!-- <div class="form-group">
+                    <label for="Conferm password">Conferm Password:</label>
+                    <input type="password" name="conferm" class="form-control " id="conferm" placeholder="password"
+                        required>
+                </div> --}}
                 <input type="submit" class="btn btn-success" value="register">
-            </form>
+                <br>
+            </form><br>
+            <div class="row ml-auto mr-auto">
+                <div class="col-md-6">
+                    <a class="ui facebook button" style="margin-bottom: 10px;">
+                        <i class="facebook icon"></i>
+                        login with Facebook
+                    </a>
+                </div>
+                <br>
+                  <div class="col-md-6">
+                    <a class="ui google button red">
+                        <i class="google icon"></i>
+                        login with google
+                    </a>
+                </div>
+            </div>
             alredy have an account?!<a href="/login" class="card-link"> login</a>
         </div>
     </div>
 </div><br><br><br>
-    {{!-- footer --}}
+{{!-- footer --}}
 {{>footer}}
 {{!-- end footer --}}
